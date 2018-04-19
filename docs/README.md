@@ -2,8 +2,6 @@
 
 > Intended audience :  **Developers** (or anyone at all friendly with HTML :) ) 
 
-Click here to see set-up guide for non-technical users.  
-
 
 ## Overview
 
