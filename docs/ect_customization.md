@@ -6,8 +6,9 @@
 
 ![alt text](/assets/filters.png)
 
+We'll explain how this works in general, then go into specific examples(filters for location, date, etc). 
 
-**First**, add filters in your initilization script 
+**First**, you add filters in your initilization script. Below, we show a generic field in the Live API.  
 ```html 
 <script>
 	EventCalendar.Initialize({
@@ -40,7 +41,9 @@
 
 ```
 
+The HTML element we added above was *declared* in the initilization script. In general, you declare any filter you want to use in the initlization script, and then render it in the HTML directly. 
 
+*Let's look at some examples*.
 
 ### Filter by location 
 
@@ -56,7 +59,7 @@ filters: [
 UI on page: 
 ```html 
 <div>
-	<input type="text" class="form-control" id="location-filter" placeholder="Event Location">
+	<input type="text" class="form-control location-filter" id="location-filter" placeholder="Event Location">
 </div>"
 ```
 
@@ -208,12 +211,66 @@ Only show events after the current date:
 
 You can pass in any well-formed filter for the Live API. [Learn more about Live API Filters](http://developer.yext.com/docs/guides/using-live-api/)  
 
+
+## Add to Calendar button 
+
+> Visitors can add an event to their Google, Apple or Outlook Calendar
+
+![alt text](/assets/add_to_cal.png)
+
+Add the following to your `result-template` div
+
+```html 
+<script id="result-template" type="text/template">
+
+// The rest of your template 
+
+	<div class="btn-group mt-2">
+	    <button type="button"
+	            class="btn btn-outline-primary btn-block dropdown-toggle"
+	            data-toggle="dropdown"
+	            aria-haspopup="true"
+	            aria-expanded="false"
+	            style="min-width: 230px;">
+	      Add to Calendar
+	    </button>
+	    <div class="dropdown-menu">
+	      <a class="dropdown-item" href="{{GoogleCalendarLink}}" target="_blank">
+	        Google
+	      </a>
+	      <a class="dropdown-item"
+	         href="{{IcsLink}}"
+	         download="{{Event.name}}-{{formatDate Event.startDateTime}}.ics">
+	        Outlook
+	      </a>
+	      <a class="dropdown-item"
+	         href="{{IcsLink}}"
+	         download="{{Event.name}}-{{formatDate Event.startDateTime}}.ics">
+	        Apple Calendar
+	      </a>
+	    </div>
+	</div>
+</script>
+
+```
+
+We reccomend you import Popper.js in your head for smooth UI: 
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+```
+
+
+
 ## Images 
 
 > Add images to your event tiles 
 
 ![alt text](/assets/event_image.png)
 
+
+Simply pull in images with Handle Bars for the appropriate field in Yext. 
 
 Here is an example of code that would pull in images to your event tile: 
 ```html 
