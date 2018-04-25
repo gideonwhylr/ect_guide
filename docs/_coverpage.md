@@ -3,7 +3,7 @@
 
 # Event Calendar Tags
 
-> An Out-of-the-box Calendar for your Website
+> An out-of-the-box Calendar for your Website
 
 
 
