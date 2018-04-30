@@ -5,7 +5,6 @@
 
 * Customization 
 	* [Configuration Options](ect_customization.md)
-	* [Design Changes](ect_customization.md)
 
 * Other Resources 
 	* [JSFiddle Prototype](https://jsfiddle.net/GideonWeiler/cxqgmfsc/10/)

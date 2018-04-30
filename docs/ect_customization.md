@@ -115,7 +115,7 @@ UI on page:
 ```
 
 
-## Google Map
+## Google Maps
 
 > Add a map of your events!
 
