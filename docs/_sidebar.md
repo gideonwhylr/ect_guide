@@ -5,6 +5,7 @@
 
 * Customization 
 	* [Configuration Options](ect_customization.md)
+	* [Event Field Reference](event_fields.md)
 
 * Other Resources 
 	* [JSFiddle Prototype](https://jsfiddle.net/GideonWeiler/cxqgmfsc/10/)
