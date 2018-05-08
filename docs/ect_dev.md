@@ -17,8 +17,7 @@ This script should go right before your closing `</head>` tag. Really, you it ca
 
 **eventcalendartags.js** 
 ```html
-<script src="https://assets.sitescdn.net/eventcalendartags/eventcalendartags.js"></script>
-
+<script src= "https://assets.sitescdn.net/events/events.js"> </script> 
 ```
 
 ## Import Bootstrap for styling (optional but highly reccomended)
