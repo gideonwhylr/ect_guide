@@ -211,6 +211,17 @@ Only show events after the current date:
 
 You can pass in any well-formed filter for the Live API. [Learn more about Live API Filters](http://developer.yext.com/docs/guides/using-live-api/)  
 
+## Date Formatting 
+
+We use Format.JS in Handlebars to format the date and time of your results: 
+
+```html
+<div class="date-day"> {{formatDate Event.startDateTime month="short"}} </div>
+
+```
+
+
+Displays the an abbreviated month, for example. See all the formatting options [here](https://formatjs.io/handlebars/) 
 
 ## Add to Calendar button 
 
