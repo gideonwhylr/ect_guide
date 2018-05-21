@@ -9,4 +9,3 @@
 
 * Other Resources 
 	* [JSFiddle Prototype](https://jsfiddle.net/GideonWeiler/cxqgmfsc/10/)
-	* [Showcase](https://mxs2019.github.io/Event-Calander-Demo/index.html)
